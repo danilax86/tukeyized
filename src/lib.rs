@@ -56,7 +56,7 @@ fn trim(values: &[f64]) -> Vec<f64> {
 /// Calculates Tukey-style quartiles from already-sorted values.
 fn hinge(values: &[f64]) -> (f64, f64) {
     let mid = values.len() / 2;
-    if values.len() % 2 == 0 {
+    if values.len().is_multiple_of(2){
         return (middle(&values[..mid]), middle(&values[mid..]));
     }
     (middle(&values[..mid]), middle(&values[mid + 1..]))
@@ -128,7 +128,7 @@ mod tests {
 
     #[test]
     fn array_returns_the_original_values_when_there_are_too_few_elements() {
-        let values = "a".bytes().map(|b| f64::from(b)).collect::<Vec<f64>>();
+        let values = "a".bytes().map(f64::from).collect::<Vec<f64>>();
         let result = values.tukeyize();
         assert_eq!(
             result, values,
