@@ -20,6 +20,8 @@ jobs:
       - run: cargo test --all
 
   publish:
+    permissions:
+      contents: write
     needs: test
     runs-on: ubuntu-latest
     steps:
