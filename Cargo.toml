@@ -1,6 +1,6 @@
 [package]
 name = "tukeyized"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 license = "MIT"
 description = "Removes outliers from numeric arrays using Tukey’s range test (1.5×IQR fences)."
