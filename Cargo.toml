@@ -2,7 +2,7 @@
 name = "tukeyized"
 version = "0.1.0"
 edition = "2024"
-license-file = "LICENSE"
+license = "MIT"
 description = "Removes outliers from numeric arrays using Tukey’s range test (1.5×IQR fences)."
 readme = "README.md"
 repository = "https://github.com/danilax86/tukeyized"
